@@ -5,7 +5,8 @@ import asyncio
 
 async def test():
     c = wikipydia.client.Client()
-    print(await c.search(['Main Page', 'MediaWiki'])) # yay multi page titles
+    pages = await c.search_title(['Main Pa', 'MediaWiki'])
+    print(pages)
     c.close()
 
 loop = asyncio.get_event_loop()
