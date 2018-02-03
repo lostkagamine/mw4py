@@ -1,0 +1,1 @@
+from wikipydia import client
