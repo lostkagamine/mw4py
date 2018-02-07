@@ -11,6 +11,7 @@ class Client:
             logs.warn('Username + password combinations are deprecated. Consider switching to OAuth2.')
         self.base_url = 'https://en.wikipedia.org/w/api.php' # enwiki default api
         self.page_burl = 'https://en.wikipedia.org/wiki/' # enwiki default page url
+        self.rest_burl = 'https://en.wikipedia.org/api/rest_v1/' # enwiki default REST url
         self.cs = aiohttp.ClientSession()
 
     async def search_title(self, query:list):
@@ -31,9 +32,10 @@ class Client:
         pages = pages[0] if len(pages) == 1 else pages
         return pages
 
-    def base(self, url, page=None):
+    def base(self, url, rest, page=None):
         'Changes the base URL for searches and API requests.'
         self.base_url = url
+        self.rest_burl = rest
         if page: self.page_burl = page
 
     def close(self):
