@@ -32,6 +32,7 @@ setuptools.setup(
   license = "MIT",
   keywords = "python wikipedia API",
   url = "https://github.com/ry00001/wikipydia",
+  download_url = 'https://github.com/ry00001/wikipydia/archive/v0.0.1-alpha.tar.gz',
   install_requires = install_reqs,
   packages = ['wikipydia'],
   long_description = local_file('README.md').read(),
