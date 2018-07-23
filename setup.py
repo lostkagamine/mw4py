@@ -24,17 +24,17 @@ version = re.search(
 
 
 setuptools.setup(
-  name = "Wikipydia",
+  name = "mw4py",
   version = '.'.join(version),
   author = "ry00001",
-  author_email = "hello@ry00001.me",
+  author_email = "ry00001@protonmail.com",
   description = "Asynchronous (asyncio, aiohttp) Wikipedia API wrapper",
   license = "MIT",
   keywords = "python wikipedia API",
-  url = "https://github.com/ry00001/wikipydia",
-  download_url = 'https://github.com/ry00001/wikipydia/archive/v0.0.1-alpha.tar.gz',
+  url = "https://github.com/ry00001/mw4py",
+  download_url = 'https://github.com/ry00001/mw4py/archive/v0.0.1-alpha.tar.gz',
   install_requires = install_reqs,
-  packages = ['wikipydia'],
+  packages = ['mw4py'],
   long_description = local_file('README.md').read(),
   classifiers = [
     'Development Status :: 3 - Alpha',

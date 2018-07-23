@@ -1,11 +1,11 @@
 import aiohttp
 import asyncio
-from wikipydia import logs
-from wikipydia import classes
+from mw4py import logs
+from mw4py import classes
 import urllib
 
 class Client:
-    'Base client class for Wikipydia applications.'
+    'Base client class for mw4py applications.'
     def __init__(self, token=None, username=None, password=None):
         if username and password:
             logs.warn('Username + password combinations are deprecated. Consider switching to OAuth2.')

@@ -1,4 +1,4 @@
-# Wikipydia
+# mw4py
 A coroutine-based, asynchronous Wikipedia API wrapper for Python.  
 Powered by [asyncio](https://docs.python.org/3/library/asyncio.html "asyncio").  
 

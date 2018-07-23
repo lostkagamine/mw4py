@@ -1,5 +1,5 @@
 
-# wikipydia classes
+# mw4py classes
 # don't touch these or you'll break the module
 
 import asyncio
