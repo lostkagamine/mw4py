@@ -14,12 +14,10 @@ class Client:
         self.rest_burl = 'https://en.wikipedia.org/api/rest_v1/' # enwiki default REST url
         self.cs = aiohttp.ClientSession()
 
-    async def search_title(self, query:list):
-        'Search for page titles.'
-        if type(query) == str:
-            query = query.split(',')
-        query = [urllib.parse.quote_plus(i) for i in query]
-        params = f'?action=query&titles={"|".join(query)}&format=json'
+    async def search_title(self, *queries):
+        'Search for page titles'
+        queries = [urllib.parse.quote_plus(i) for i in queries]
+        params = f'?action=query&titles={"|".join(queries)}&format=json'
         final = self.base_url + params
         async with self.cs.get(final) as r:
             res = await r.json(content_type=None)

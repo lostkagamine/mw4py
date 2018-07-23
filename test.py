@@ -3,7 +3,7 @@ import mw4py
 
 async def _test():
     c = mw4py.Client()
-    pages = await c.search_title('MediaWiki')
+    pages = await c.search_title('MediaWiki', 'adasdad')
     c.close()
     print([p.title for p in pages if type(p) != mw4py.NotFoundPage])
 
